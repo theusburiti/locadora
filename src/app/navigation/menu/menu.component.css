@@ -1,0 +1,17 @@
+.router-link-active{
+    color: #4CAF50 !important;
+}
+
+li.nav-item a {
+    color: #cecece;
+    
+}
+
+li.nav-item a:hover {
+    color: #4CAF50;
+    
+}
+
+a.navbar-brand.titulo.router-link-active {
+    color: white !important;
+}

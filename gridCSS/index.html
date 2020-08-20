@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS GRID</title>
+<style>
+.wrapper{
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-areas: "item1 item2" "item1 item3";
+    gap:30px; 
+}
+.item1{
+    grid-area: item1;
+    background-color: blue;
+}
+.item2{
+    grid-area: item2;
+    background: rgb(232,1,1);
+    background: linear-gradient(90deg, rgba(232,1,1,1) 19%, rgba(9,9,121,1) 68%);
+}
+.item3{
+    grid-area: item3;
+    background: url(angular.png);
+    background-position: center;
+    background-size: cover;
+}
+
+p {
+    font-size: 32px;
+    font-family: Open Sans, sans-serif;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    color: white;
+    font-weight: bold;
+}
+p.img {
+    width: 30%;
+    position: relative;
+    top: 0px;
+    text-align: justify;
+    left: 30px;
+}
+
+@media screen and (max-width: 768px){
+    .wrapper{
+        grid-template-areas: "item1" "item2" "item3";
+        grid-template-rows: 100% 100% 100%; 
+    }
+    .item1{
+    grid-area: item1;
+    }
+    .item2{
+    grid-area: item2;
+    }
+    .item3{
+    grid-area: item3;
+    }
+}
+
+</style>
+  </head>
+    <body>
+      <div class="wrapper">
+        <div class="item1"><p>Item 1</p></div>
+        <div class="item2"><p>Item 2</p></div>
+        <div class="item3"><p class="img">Item 3</p></div>
+   
+      </div>
+
+  </body> 
+</html>

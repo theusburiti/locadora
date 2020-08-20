@@ -1,0 +1,15 @@
+<div class="d-flex mt-2 flex-wrap justify-content-center">
+  <div class="card m-2" style="width: 18rem;" *ngFor="let filme of filmes">
+    <img class="card-img-top poster" [src]="filme.poster" [alt]="filme.nome">
+    <div class="card-body">
+      <h5 class="card-title">{{filme.nome}}</h5>
+      <p class="card-text">{{filme.descricao}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Ano: {{filme.ano}}</li>
+      <li class="list-group-item">Diretor: {{filme.diretor}}</li>
+      <li class="list-group-item">Gênero: {{filme.genero}}</li>
+    </ul>
+    
+  </div>
+</div>

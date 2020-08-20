@@ -1,0 +1,66 @@
+<h1 class="titulo mb-4 mt-4">Cadastrar Filmes</h1>
+<div class="card">
+  <div class="card-body">
+<form [formGroup]="cadastroFilme" #form="ngForm" (ngSubmit)="cadastrarFilme()">
+  <div class="form-row">
+    <div class="form-group col-3">
+      <label for="exampleInputEmail1">Número do Filme</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" formControlName="numeroFilme">
+      <small *ngIf="cadastroFilme.get('numeroFilme').errors?.required && form.submitted">Este campo é obrigatório!</small>
+    </div>
+    <div class="form-group col-3">
+      <label for="exampleInputPassword1">Tipo do Produto</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="tipoProduto">
+      <small *ngIf="cadastroFilme.get('tipoProduto').errors?.required && form.submitted">Este campo é obrigatório!</small>
+    </div>
+    <div class="form-group col-3">
+      <label for="exampleInputPassword1">Tipo de Filme</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="tipoFilme">
+      <small *ngIf="cadastroFilme.get('tipoFilme').errors?.required && form.submitted">Este campo é obrigatório!</small>
+    </div>
+    <div class="form-group col-3">
+      <label for="exampleInputPassword1">Gênero</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="genero">
+      <small *ngIf="cadastroFilme.get('genero').errors?.required && form.submitted">Este campo é obrigatório!</small>
+    </div>
+    <div class="form-group col-12">
+      <label for="exampleInputPassword1">Título do Filme</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="tituloFilme">
+      <small *ngIf="cadastroFilme.get('tituloFilme').errors?.required && form.submitted">Este campo é obrigatório!</small>
+    </div>
+    <div class="form-group col-12">
+      <label for="exampleInputPassword1">Principais Atores</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="principaisAtores">
+      <small *ngIf="cadastroFilme.get('principaisAtores').errors?.required && form.submitted">Este campo é obrigatório!</small>
+    </div>
+    <div class="form-group col-12">
+      <label for="exampleInputPassword1">Principais Diretores</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="principaisDiretores">
+      <small *ngIf="cadastroFilme.get('principaisDiretores').errors?.required && form.submitted">Este campo é obrigatório!</small>
+    </div>
+    <div class="form-group col-12">
+      <label for="exampleInputPassword1">Fornecedor</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="fornecedor">
+      <small *ngIf="cadastroFilme.get('fornecedor').errors?.required && form.submitted">Este campo é obrigatório!</small>
+    </div>
+    <div class="form-group col-6">
+      <label for="exampleInputPassword1">Tipo de Idioma</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="tipoIdioma">
+      <small *ngIf="cadastroFilme.get('tipoIdioma').errors?.required && form.submitted">Este campo é obrigatório!</small>
+    </div>
+    <div class="form-group col-3">
+      <label for="exampleInputPassword1">Valor da Locação</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="valorLocacao">
+      <small *ngIf="cadastroFilme.get('valorLocacao').errors?.required && form.submitted">Este campo é obrigatório!</small>
+    </div>
+    <div class="form-group col-3">
+      <label for="exampleInputPassword1">Data do Cadastro</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="dataCadastro">
+      <small *ngIf="cadastroFilme.get('dataCadastro').errors?.required && form.submitted">Este campo é obrigatório!</small>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </div>
+  </form>
+  </div>
+  </div>
